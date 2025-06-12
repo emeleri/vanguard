@@ -103,7 +103,8 @@ c
                 </table>
             </div>
 
-                Growth
+            <div class="growth">
+                <h3>Growth</h3>
 <!-- CODE PROVIDED FOR YOU, NOTHING TO DO FOR THE BAR CHART IN THE HTML-->
                     <div  id="bar-chart">
                         <div class="bar" data-year="2020" style="--height: 30%;"></div>
@@ -112,24 +113,26 @@ c
                         <div class="bar" data-year="2023" style="--height: 85%;"></div>
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-        Contact Us
-        Want to take your business to the next level? Get in touch with our elite team today.
+        <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
 
-            Full Name
-
-            Email Address
-
-            Company Name
-
-            Industry
-
-            How can we help you?
-
-            Submit
-
-            <footer>
-                <p>© 2025 Vanguard. All rights reserved.</p>
-                <p>Email: info@vanguard.com | Phone: 480.123.4567</p>
-            </footer>
-        </body>
+        <form>
+            <div class="form-row">
+                <input type="text" placeholder="Full Name" name="full-name" required>
+                <input type="email" placeholder="Email Address" name="email" required>
+            </div>
+            <div class="form-row">
+                <input type="text" placeholder="Company Name" name="company-name">
+                <input type="text" placeholder="Industry" name="industry">
+            </div>
+            <textarea placeholder="How can we help you?" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>

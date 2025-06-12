@@ -116,7 +116,7 @@ header h1::before {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.5s ease;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -144,21 +144,23 @@ header h1::before {
 }
 
 
-/* MEDIA QUERIES (MEDIUM) */ 
-
-    #results {
-        grid-template-columns: 1fr 1fr;
+/* MEDIA QUERIES (MEDIUM) */
+@media (min-width: 800px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .results-container {
+    .form-row {
+        flex-direction: row;
+    }
+    .results-grid {
         flex-direction: row;
         justify-content: space-between;
     }
-    .results-table {
-        width: 50%;
-    }
-    .bar-chart {
-        width: 50%;
-    }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

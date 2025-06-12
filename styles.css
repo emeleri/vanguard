@@ -88,14 +88,14 @@ table {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+header h1::before {
     content: "";
-
-    left:-.5rem;
+    display: inline-block;
+    vertical-align: middle;
     width: 3.75rem;
     height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
+    background: url('vanguard-logo.svg') no-repeat center/contain;
+    margin-right: 0.5rem;
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {

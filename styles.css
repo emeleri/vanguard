@@ -73,11 +73,12 @@ table {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
     place-items: center;

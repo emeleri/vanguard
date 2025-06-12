@@ -88,6 +88,12 @@ table {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
+header {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 1rem 0;
+}
+
 header h1::before {
     content: "";
     display: inline-block;
@@ -97,6 +103,19 @@ header h1::before {
     background: url('vanguard-logo.svg') no-repeat center/contain;
     margin-right: 0.5rem;
 }
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+}
+nav a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;

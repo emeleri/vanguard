@@ -2,11 +2,8 @@
 
 /* IMPORTED FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-/* CSS RESET */
-/* http://meyerweb.com/eric/tools/css/reset/
-v2.0 | 20110126
-License: none (public domain)
-*/
+
+/* RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,166 +17,240 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-    display: block;
+  display: block;
 }
 body {
-    line-height: 1;
-    font-family: 'Inter', sans-serif;
-    background-color: #000;
-    color: #fff;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
+  list-style: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* ROOT VARIABLES */
+/* VARIABLES */
 :root {
-    --blue: #007BFF;
-    --red: #FF4500;
-    --white: #EAEAEA;
-    --black: #000000;
-    --charcoal: #333333;
-    --font: "Inter", sans-serif;
+  --blue: #007BFF;
+  --red: #FF4500;
+  --white: #EAEAEA;
+  --black: #000000;
+  --charcoal: #333333;
+  --font: "Inter", sans-serif;
 }
 
-/* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
-
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+/* GLOBAL */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-/* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('vanguard-hero.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 1rem;
-    overflow: hidden;
-}
-
-/* ADD FLOATING SVG LOGO BEFORE THE H1 */
+/* HEADER */
 header {
-    background-color: var(--white);
-    color: var(--black);
-    padding: 1rem 0;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
 header h1::before {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    width: 3.75rem;
-    height: 3.75rem;
-    background: url('vanguard-logo.svg') no-repeat center/contain;
-    margin-right: 0.5rem;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.75rem;
+  height: 3.75rem;
+  background: url('images/vanguard-logo.svg') no-repeat center/contain;
+  margin-right: 0.5rem;
 }
-
 nav ul {
-    display: flex;
-    gap: 1rem;
-    justify-content: flex-end;
-    margin-top: 0.5rem;
+  display: flex;
+  gap: 1.5rem;
 }
 nav a {
-    color: var(--black);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-/* THIS ONE IS DONE FOR YOU */
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+.hero button {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* SECTION: WHAT WE OFFER */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.service-box {
+  background-color: var(--blue);
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* SECTION: RESULTS */
+.results-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+#profits {
+  background-color: #111;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+#profits table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+#profits th, #profits td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #333;
+}
+
+/* BAR CHART */
 #bar-chart {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: flex-end;
-    justify-content: space-around;
-    gap: 1rem;
-    height: 300px;
-    width: 100%;
-    max-width: 800px;
-    padding: 1rem;
-    position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: flex-end;
+  justify-content: space-around;
+  gap: 1rem;
+  height: 300px;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  position: relative;
 }
-/* ADD ON TRANSITION ON HEIGHT */
 .bar {
-    width: 50px;
-    background: var(--charcoal);
-    border-radius: 10px;
-    position: relative;
-    transition: height 0.5s ease;
-    height: 0;
+  width: 50px;
+  background: var(--charcoal);
+  border-radius: 10px;
+  position: relative;
+  transition: height 0.5s ease;
+  height: 0;
+  animation: stepUp 1s ease-in-out forwards;
 }
-/* THIS ONE IS DONE FOR YOU */
 .bar::after {
-    content: attr(data-year);
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--white);
+  content: attr(data-year);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
 }
 @keyframes stepUp {
-    0% {
-        height: 0;
-    }
-    100% {
-        height: var(--height);
-    }
-}
-/* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
-.bar {
-    animation: stepUp 1s ease-in-out forwards;
+  0% {
+    height: 0;
+  }
+  100% {
+    height: var(--height);
+  }
 }
 
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+button[type="submit"] {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-/* MEDIA QUERIES (MEDIUM) */
+/* MEDIA QUERIES */
 @media (min-width: 800px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .form-row {
-        flex-direction: row;
-    }
-    .results-grid {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form-row {
+    flex-direction: row;
+  }
+  .results-grid {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
-
-/* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

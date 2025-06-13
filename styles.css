@@ -284,3 +284,42 @@ button[type="submit"] {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ─── MOBILE NAVIGATION ───────────────────────── */
+.main-nav ul {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.menu-toggle {
+  margin-left: auto;
+  padding-right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--blue);
+  cursor: pointer;
+  display: block;
+}
+
+/* Show menu when toggled */
+.main-nav.active ul {
+  display: flex;
+}
+
+/* ─── DESKTOP NAV ─────────────────────────────── */
+@media (min-width: 800px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav ul {
+    display: flex !important;
+    flex-direction: row;
+    margin-top: 0;
+    gap: 2rem;
+  }
+}
+

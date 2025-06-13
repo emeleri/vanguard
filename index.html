@@ -13,7 +13,12 @@
 <body>
   <header>
     <h1>Vanguard</h1>
-    <nav>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -142,5 +147,13 @@
     <p>© 2025 Vanguard. All rights reserved.</p>
     <p>Email: <a href="mailto:info@vanguard.com">info@vanguard.com</a> | Phone: 480.123.4567</p>
   </footer>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.main-nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

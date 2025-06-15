@@ -447,3 +447,49 @@ button[type="submit"] {
   }
 }
 
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ---------- PROFITS ---------- */
+#profits {
+  width: 100%;
+  max-width: 500px;
+}
+.profits-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+.profits-table {
+  background: #111;
+  padding: 1rem;
+}
+.profits-table table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* ---------- GROWTH ---------- */
+.growth {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.growth-label {
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 800px) {
+  #profits        { max-width: 100%; }
+  .profits-table  { overflow-x: auto; }
+
+  #bar-chart      {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+

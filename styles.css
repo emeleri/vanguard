@@ -259,13 +259,22 @@ button[type="submit"]:hover {
 }
 
 #profits {
-  background-color: #111;
-  color: white;
-  padding: 1rem;
-  border-radius: 0; 
   width: 100%;
   max-width: 500px;
 }
+
+.profits-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.profits-table {
+  background-color: #111;
+  color: white;
+  padding: 1rem;
+}
+
 
 #profits h3 {
   font-size: 1.5rem;
